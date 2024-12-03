@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="{{ DEFAULT_LANG }}" itemscope itemtype="http://schema.org/Person">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <!-- Site metadata -->
+  <title>{% block title %} {{ SITENAME }} {% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ AUTHOR_DESCRIPTION }}">
+  <meta name="author" content="{{ AUTHOR }}">
+
+  <link rel="shortcut icon" href="{{ FAVICON }}">
+
+  <!-- schema.org metadata -->
+  <meta itemprop="name" content="{{ SITENAME }}">
+  <meta itemprop="image" content="{{ AVATAR}}">
+  <meta itemprop="description" content="{{ AUTHOR_DESCRIPTION }}">
+
+  <!-- Style metadata -->
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css" type="text/css" />
+  {% endblock %}
+</head>
+
+<body>
+    
+    <div class="container">
+        <!-- Title -->
+        <div class="box border" style="margin-top: 20px; margin-bottom: 10px;">
+            <a class="box" href="{{ SITEURL }}"><b style="white-space: nowrap; font-size: 1.2rem;">{{ SITENAME }}</b></a>
+            <hr>
+            <p>
+                This website is a place for me to write about things I find interesting and to keep a log of the things that I learn and build.<br><br>
+                I'm currently interested in generative AI, economics, data, painting, and fractals.
+            </p>
+        </div>
+        
+        <!-- Content -->
+        <maincontent>
+            {% block content %}
+            {% endblock %}
+        </maincontent>
+
+        <!-- Footer -->
+        <div class="box border">
+            <div class="box" style="margin-bottom: 0px">
+            {% if SOCIAL %}
+                {% for name, link in SOCIAL %}
+                    <a style="display: flex; justify-content: center;" href="{{ link }}" target="_blank">
+                        <img class="social-icon" src="{{ SITEURL }}/theme/images/icons/{{ name|lower }}.png">
+                    </a>
+                {% endfor %}
+            {% endif %}
+            </div>
+            <hr>
+            <p>If you have any questions, you are working on an interesting problem, or just you want to chat--flick me a message.</p>
+        </div>
+    </div>
+</body>
+
+</html>

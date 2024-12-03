@@ -1,0 +1,87 @@
+/* 
+Overview
+- Theming for my personal website
+- Uses a simple color scheme and rounded edges to create a clean and modern look
+- Uses a dark theme with light text and accents
+- Uses a standard colour pallete with colours for primary, secondary, and accent elements
+
+Colours
+- Primary: #333333 (dark grey)
+- Secondary: #666666 (medium grey)
+- Accent: #ffcc00 (yellow)
+- Background: #000000 (black)
+- Text: #ffffff (white)
+
+Notes
+- Text should be slightly smaller than default to fit more content on the page
+
+Classes
+- container: Houses all content on the page. Should be centered on the page and have padding on the left and right sides
+- box: A box that contains content. Should have curved edges and some internal padding to separate content from the edges of the box. Content should be centered vertically and horizontally within the box
+- tag: A tag that can be used to label content. Should have a background color and rounded edges
+- social-icon: An icon that represents a social media platform. Should be a maximum of 30px in size
+*/
+
+body {
+    background-color: #1c1c1c;
+    color: #dcdcdc;
+    font-family: 'Arial', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a18100;
+}
+
+li, p, b {
+    font-size: 0.95em;
+}
+
+hr {
+    border-color: rgb(21, 21, 21);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.box {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 10px;
+    display: flex;
+}
+
+.tag {
+    background-color: #4e4e4e;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 4px;
+    font-size: 0.9rem;
+}
+
+.icon {
+    max-width: 25px;
+}
+
+.social-icon {
+    max-width: 30px;
+    margin: auto;
+}
+
+.border {
+    background-color: rgb(21, 21, 21);
+    border: 1px solid rgb(103, 103, 103);
+    border-radius: 5px;
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+{% endblock head %}
+
+{% block content_title %}{% endblock %}
+
+{% block content %}
+{% if articles %}
+{% for article in (articles_page.object_list if articles_page else articles) %}
+<div class="box" style="display: block; margin-bottom: 0px">
+    <h3 style="margin: 0px; font-size: 1.3rem"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">{{ article.title }}</a></h3>
+    {% if article.summary|length > 0 %}
+        {{ article.summary }}
+    {% endif %}
+    <br>
+    <div class="box" style="margin-bottom: 0px">
+        <img class="icon" src="{{ SITEURL }}/theme/images/icons/date.png">
+        <span class="tag">{{ article.date.strftime('%Y-%m-%d') }}</span>
+        {% if article.tags %}
+            <img class="icon" src="{{ SITEURL }}/theme/images/icons/tag.png">
+            {% for tag in article.tags %}
+                <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% if not loop.last %}
+<hr style="margin-top: 0px;">
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endblock content %}
