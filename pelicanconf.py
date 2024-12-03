@@ -1,6 +1,6 @@
 AUTHOR = 'Joel Harris'
 SITENAME = 'Joel Harris'
-SITEURL = ''
+SITEURL = 'https://joelharr.is'
 
 THEME = 'theme'
 PATH = 'content'
