@@ -2,7 +2,7 @@ AUTHOR = 'Joel Harris'
 SITENAME = 'Joel Harris'
 SITEURL = ''
 
-THEME = '/home/joel/projects/website/theme'
+THEME = 'theme'
 PATH = 'content'
 
 STATIC_PATHS = [
