@@ -7,6 +7,8 @@
 
 {% block content %}
 {% if articles %}
+<h2 style="margin-left: 10px;">Recent posts</h2>
+<hr>
 {% for article in (articles_page.object_list if articles_page else articles) %}
 <div class="box" style="display: block; margin-bottom: 0px">
     <h3 style="margin: 0px; font-size: 1.3rem"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">{{ article.title }}</a></h3>

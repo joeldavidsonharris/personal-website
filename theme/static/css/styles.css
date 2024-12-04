@@ -20,7 +20,14 @@ Classes
 - box: A box that contains content. Should have curved edges and some internal padding to separate content from the edges of the box. Content should be centered vertically and horizontally within the box
 - tag: A tag that can be used to label content. Should have a background color and rounded edges
 - social-icon: An icon that represents a social media platform. Should be a maximum of 30px in size
+
+Custom elements
+- mainarticle: Content of a post
+- toc: Table of contents for a post
+
 */
+
+/* General formatting */
 
 body {
     background-color: #1c1c1c;
@@ -84,4 +91,110 @@ hr {
     background-color: rgb(21, 21, 21);
     border: 1px solid rgb(103, 103, 103);
     border-radius: 5px;
+}
+
+/* Post formatting */
+
+.toc {
+    line-height: 1;
+}
+
+mainarticle {
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Headings within Main Article */
+mainarticle h1, 
+mainarticle h2, 
+mainarticle h3, 
+mainarticle h4, 
+mainarticle h5, 
+mainarticle h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* Paragraphs within Main Article */
+mainarticle p {
+    margin-bottom: 1.5em;
+    text-align: justify;
+}
+
+/* Lists within Main Article */
+mainarticle ul, 
+mainarticle ol {
+    padding-left: 40px;
+    margin-bottom: 1.5em;
+    line-height: 1.2rem;
+}
+
+mainarticle ul li, 
+mainarticle ol li {
+    margin-bottom: 0.5em;
+    padding-left: 5px;
+}
+
+/* Table Styling within Main Article */
+mainarticle table {
+    border-spacing: 0;
+    display: block;
+    overflow-x: auto;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+mainarticle td,
+mainarticle th {
+    border-bottom: 0.1rem solid #e1e1e1;
+    padding: 0.8rem 1rem;
+    font-weight: normal;
+}
+
+mainarticle td:first-child,
+mainarticle th:first-child {
+    padding-left: 0;
+}
+
+mainarticle td:last-child,
+mainarticle th:last-child {
+    padding-right: 10;
+}
+
+/* Inline Code Styling within Main Article */
+mainarticle code {
+    font-family: 'Courier New', monospace;
+    background: #4e4e4e;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Links within Main Article */
+mainarticle a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+mainarticle a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons within Main Article */
+mainarticle button {
+    background-color: #ffcc00;
+    color: #333333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+mainarticle button:hover {
+    background-color: #a18100;
 }

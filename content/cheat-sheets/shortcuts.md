@@ -1,8 +1,7 @@
 Title: Shortcut cheat sheet
 Date: 2024-11-25
-Category: Cheat Sheets
 Slug: my-shortcuts
-Tags: shortcuts, cheat-sheet
+Tags: cheat-sheet
 Author: Joel Harris
 Summary: Some useful shortcuts that I use often
 

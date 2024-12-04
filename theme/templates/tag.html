@@ -1,18 +1,37 @@
 {% extends "index.html" %}
 {% block head %}
     {{ super() }}
-    <meta name="twitter:creator" content="{{ TWITTER_USERNAME }}">
-    <meta name="twitter:url" content="{{ SITEURL }}/{{ tag.url }}">
-    <meta name="twitter:title" content="{{ SITENAME }} || {{ tag }}">
-    <meta name="twitter:description" content="Articles with the tag '{{ tag }}'">
-
-    <!-- Facebook Meta Data -->
-    <meta property="og:title" content="{{ SITENAME }} || {{ tag }}"/>
-    <meta property="og:description" content="Articles with the tag '{{ tag }}'"/>
-    <meta property="og:image" content="{{ AVATAR }}"/>
 {% endblock head %}
-{% block title %}{{ SITENAME }} - {{ tag }}{% endblock %}
-{% block heading %}
-    <h3>Tagged as {{ tag }}</h3>
+{% block title %}{{ SITENAME }} - {{ (tag|string).title() }}{% endblock %}
+
+{% block content %}
+<body>
+    <h2 style="margin-left: 10px">Posts tagged with <span class="tag" style="font-size: 1.3rem; color: #ffcc00;">{{ tag }}</span></h2>
+    <hr>
+    {% if articles %}
+    {% for article in (articles_page.object_list if articles_page else articles) %}
+    <div class="box" style="display: block; margin-bottom: 0px">
+        <h3 style="margin: 0px; font-size: 1.3rem"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark">{{ article.title }}</a></h3>
+        {% if article.summary|length > 0 %}
+            {{ article.summary }}
+        {% endif %}
+        <br>
+        <div class="box" style="margin-bottom: 0px">
+            <img class="icon" src="{{ SITEURL }}/theme/images/icons/date.png">
+            <span class="tag">{{ article.date.strftime('%Y-%m-%d') }}</span>
+            {% if article.tags %}
+                <img class="icon" src="{{ SITEURL }}/theme/images/icons/tag.png">
+                {% for tag in article.tags %}
+                    <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    {% if not loop.last %}
+    <hr style="margin-top: 0px;">
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</body>
 {% endblock %}
 

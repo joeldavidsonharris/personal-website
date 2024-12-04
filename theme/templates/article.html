@@ -6,23 +6,20 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block content %}
-<h1>
-    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title }}">{{ article.title }}</a>
-</h1>
-
-<div style="margin-bottom: 20px">
+<h1 style="margin-left: 10px; margin-bottom: 10px; color: #ffcc00">{{ article.title }}</h1>
+<div>
     <div class="box" style="margin-bottom: 0px">
         <img class="icon" src="{{ SITEURL }}/theme/images/icons/date.png">
         <span class="tag">{{ article.date.strftime('%Y-%m-%d') }}</span>
         {% if article.tags %}
-            <img class="icon" src="{{ SITEURL }}/theme/images/icons/tag.png">
-            {% for tag in article.tags %}
-                <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
-            {% endfor %}
+        <img class="icon" src="{{ SITEURL }}/theme/images/icons/tag.png">
+        {% for tag in article.tags %}
+        <span class="tag"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></span>
+        {% endfor %}
         {% endif %}
     </div>
 </div>
-
+<hr style="margin-bottom: 0px; margin-top: 10px;">
 <div>
     <mainarticle>
     {{ article.content }}

@@ -1,6 +1,5 @@
 Title: What language should a data team speak?
 Date: 2024-11-26
-Category: Essays
 Slug: data-team-language
 Tags: data
 Author: Joel Harris
