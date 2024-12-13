@@ -32,7 +32,7 @@ Custom elements
 body {
     background-color: #1c1c1c;
     color: #dcdcdc;
-    font-family: 'Arial', sans-serif;
+    font-family: "Source Sans 3", sans-serif;
 }
 
 body::-webkit-scrollbar {

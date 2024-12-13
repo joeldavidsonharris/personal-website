@@ -1,23 +1,28 @@
 <!doctype html>
 <html lang="{{ DEFAULT_LANG }}" itemscope itemtype="http://schema.org/Person">
 <head>
-  {% block head %}
-  <meta charset="utf-8">
-  <!-- Site metadata -->
-  <title>{% block title %} {{ SITENAME }} {% endblock %}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ AUTHOR_DESCRIPTION }}">
-  <meta name="author" content="{{ AUTHOR }}">
+    {% block head %}
+    <meta charset="utf-8">
+    <!-- Site metadata -->
+    <title>{% block title %} {{ SITENAME }} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ AUTHOR_DESCRIPTION }}">
+    <meta name="author" content="{{ AUTHOR }}">
 
-  <link rel="shortcut icon" href="{{ FAVICON }}">
+    <link rel="shortcut icon" href="{{ FAVICON }}">
 
-  <!-- schema.org metadata -->
-  <meta itemprop="name" content="{{ SITENAME }}">
-  <meta itemprop="image" content="{{ AVATAR}}">
-  <meta itemprop="description" content="{{ AUTHOR_DESCRIPTION }}">
+    <!-- schema.org metadata -->
+    <meta itemprop="name" content="{{ SITENAME }}">
+    <meta itemprop="image" content="{{ AVATAR}}">
+    <meta itemprop="description" content="{{ AUTHOR_DESCRIPTION }}">
 
-  <!-- Style metadata -->
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css" type="text/css" />
+    <!-- Style metadata -->
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/styles.css" type="text/css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   {% endblock %}
 </head>
 
