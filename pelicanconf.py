@@ -1,5 +1,6 @@
 AUTHOR = 'Joel Harris'
 SITENAME = 'Joel Harris'
+# Change to http://127.0.0.1:8000 when developing
 SITEURL = 'https://joelharr.is' # https://joelharr.is
 
 THEME = 'theme'

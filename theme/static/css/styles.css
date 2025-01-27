@@ -68,6 +68,7 @@ hr {
     margin-bottom: 20px;
     gap: 10px;
     display: flex;
+    align-items: center;
 }
 
 .tag {
@@ -80,10 +81,14 @@ hr {
 
 .icon {
     max-width: 25px;
+    height: 25px;
+    object-fit: contain;
 }
 
 .social-icon {
     max-width: 30px;
+    height: 30px;
+    object-fit: contain;
     margin: auto;
 }
 
